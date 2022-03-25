@@ -1,7 +1,9 @@
 "use strict";
 
 let forms = document.querySelector(".header-body__btn");
+let preloader = document.querySelector(".spinner-box");
 let popUp = document.querySelector(".popup");
+let popUpBody = document.querySelector(".popup-body__content");
 let rood = document
   .querySelector(".popup-content__close")
   .addEventListener("click", openForm);
@@ -21,19 +23,36 @@ function openForm() {
     document.body.style.overflow = "";
   }
 }
+// прелоадер
 
 //Отправка и получение данных
 async function send() {
-  fetch("https://jsonplaceholder.typicode.com/todos", { method: "GET" })
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      generateTable(json);
-    })
-    .catch((error) => {
-      showError(error);
-    });
+  showLoader(true);
+  setTimeout(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos", { method: "GET" })
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        generateTable(json);
+      })
+      .catch((error) => {
+        showError(error);
+      })
+      .finally(() => {
+        showLoader(false);
+      });
+  }, 2000);
+}
+
+function showLoader(show) {
+  if (show) {
+    preloader.style.display = "flex";
+    popUpBody.style.display = "none";
+  } else {
+    popUpBody.style.display = "flex";
+    preloader.style.display = "none";
+  }
 }
 function showError(error) {
   let popUpContent = document.getElementsByClassName("popup-body__content");
@@ -61,23 +80,6 @@ function generateTable(data) {
   let tbody = document.createElement("tbody");
   //фильтрация данных
   data = data.filter((item) => item.userId === 5 && !item.completed);
-  /* data.forEach(item=>{
-      let tr = document.createElement('tr')
-      let tdId = document.createElement('td')
-      tdId.innerText = item.id
-      let tdUserId = document.createElement('td')
-      tdUserId.innerText = item.userId
-      let tdTitle = document.createElement('td')
-      tdTitle.innerText = item.title
-      let tdCompleted = document.createElement('td')
-      tdCompleted.innerText = item.completed
-
-      tr.appendChild(tdId);
-      tr.appendChild(tdUserId);
-      tr.appendChild(tdTitle);
-      tr.appendChild(tdCompleted);
-      tbody.appendChild(tr)
-  }) */
   data.forEach((item) => {
     tbody.innerHTML += `<tr ><td class="column__1 ">${item.id}</td><td class="column__2">${item.userId}</td><td class="column__3">${item.title}</td><td class="column__4">${item.completed}</td></tr>`;
   });
