@@ -1,0 +1,23 @@
+@media (max-width: 1087px) {
+   [class*="__container"] {
+      max-width: 970px;
+   }
+   .header{
+      &__bg {
+         opacity: 0.5;
+      }
+   }
+   .aboutus-body {
+      &__column {
+         padding: 0px 8px;
+      }
+      &__row {
+         margin: 0px -8px;
+      }
+   }
+   .aboutus-column {
+      &__item {
+         padding: 15px 8px;
+      }
+   }
+}
