@@ -79,7 +79,7 @@ function generateTable(data) {
       tbody.appendChild(tr)
   }) */
   data.forEach((item) => {
-    tbody.innerHTML += `<tr><td>${item.id}</td><td>${item.userId}</td><td>${item.title}</td><td>${item.completed}</td></tr>`;
+    tbody.innerHTML += `<tr ><td class="column__1">${item.id}</td><td class="column__2">${item.userId}</td><td class="column__3">${item.title}</td><td class="column__4">${item.completed}</td></tr>`;
   });
   table.appendChild(tbody);
   popUpContent.appendChild(table);
