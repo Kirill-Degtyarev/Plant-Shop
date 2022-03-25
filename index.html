@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Plant shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&displat=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body header-body">
+                    <a href="index.html" class="header-body__logo">
+                        <img src="./assest/logo.svg" alt="logo">
+                    </a>
+                    <button class="header-body__btn"><span>Форма</span></button>
+                </div>
+            </div>
+            <div class="popup">
+                <div class="popup-body">
+                    <div class="popup-body__content">
+                        <div class="popup-content__close">
+                            <img src="./assest/X.svg" alt="" srcset="">
+                        </div>
+                        <div class="popup-content__geo">
+                            <img src="./assest/geo.svg" alt="" srcset="">
+                        </div>
+                        <h2 class="popup-content__title">Форма сайта</h2>
+                        <div class="popup-content__text">Lorem ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ipsum has been the industry</div>
+                        <form class="form-content">
+                            <input type="text" placeholder="Имя" name="name" required minlength="3">
+                            <input type="tel" placeholder="Номер телефона" class="tel" name="phone" required>
+                            <div class="buttons">
+                                <button type="button" class="btn cancel">Отмена</button>
+                                <button type="button" onclick="send()" class="btn">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bg">
+                <img src="./img/kembang/bg.png" alt="" srcset="">
+            </div>
+        </header>
+        <main class="main">
+            <section class="page-kembang">
+                <div class="page-kembang__container">
+                    <div class="page-kembang__body">
+                        <div class="page-kembang__information">
+                            <div class="page-kembang__info kembang-info">
+                                <h2 class="kembang-info__title">Kembang Flower Mantap</h2>
+                                <div class="kembang-info__text">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    since
+                                    the 1500s, </div>
+                            </div>
+                            <div class="page-kembang__buttons">
+                                <div class="kembang-button white">
+                                    <h2 class="kembang-button__title previous">Previous</h2>
+                                    <div class="kembang-button__subtitle">Kaktus Plant</div>
+                                </div>
+                                <div class="kembang-button green">
+                                    <h2 class="kembang-button__title next">Next</h2>
+                                    <div class="kembang-button__subtitle">Rahasia Plant</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-aboutus">
+                <div class="page-aboutus__container">
+                    <div class="page-aboutus__body aboutus-body">
+                        <div class="aboutus-body__row">
+                            <div class="aboutus-body__column aboutus-column">
+                                <div class="aboutus-column__item ">
+                                    <h2 class="column-item__title fast">Fast<br>Delivery</h2>
+                                    <div class="column-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard </div>
+                                </div>
+                            </div>
+                            <div class="aboutus-body__column aboutus-column">
+                                <div class="aboutus-column__item ">
+                                    <h2 class="column-item__title headphones">Great Customer<br>Service</h2>
+                                    <div class="column-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard </div>
+                                </div>
+                            </div>
+                            <div class="aboutus-body__column aboutus-column">
+                                <div class="aboutus-column__item ">
+                                    <h2 class="column-item__title plant">Original<br>Plants</h2>
+                                    <div class="column-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard </div>
+                                </div>
+                            </div>
+                            <div class="aboutus-body__column aboutus-column">
+                                <div class="aboutus-column__item ">
+                                    <h2 class="column-item__title dollar">Affordable<br>Price</h2>
+                                    <div class="column-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry's standard </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-plants">
+                <div class="page-plants__container">
+                    <div class="page-plants__body">
+                        <div class="plants-body__header">
+                            <h2 class="plants-header__title">Featured Plants</h2>
+                            <div class="plants-header__spoiler"><span>Cheaper First</span></div>
+                        </div>
+                        <div class="plants-body__line"></div>
+                        <div class="plants-body__items">
+                            <div class="plants-items__row">
+                                <div class="items-row__column">
+                                    <div class="column-item">
+                                        <div class="column-item__img">
+                                            <img src="./img/plants/kaktus.png" alt="kaktus" srcset="">
+                                        </div>
+                                        <div class="column-item__subtitle">Kaktus Plants</div>
+                                        <div class="column-item__price">IDR 85.000</div>
+                                    </div>
+                                </div>
+                                <div class="items-row__column">
+                                    <div class="column-item">
+                                        <div class="column-item__img">
+                                            <img src="./img/plants/landak.png" alt="kaktus" srcset="">
+                                        </div>
+                                        <div class="column-item__subtitle">Landak Plants</div>
+                                        <div class="column-item__price">IDR 105.000</div>
+                                    </div>
+                                </div>
+                                <div class="items-row__column">
+                                    <div class="column-item">
+                                        <div class="column-item__img">
+                                            <img src="./img/plants/kecubung.png" alt="kaktus" srcset="">
+                                        </div>
+                                        <div class="column-item__subtitle">Kecubung Plants</div>
+                                        <div class="column-item__price">IDR 85.000</div>
+                                    </div>
+                                </div>
+                                <div class="items-row__column">
+                                    <div class="column-item">
+                                        <div class="column-item__img">
+                                            <img src="./img/plants/kecubung_2.png" alt="kaktus" srcset="">
+                                        </div>
+                                        <div class="column-item__subtitle">Kecubung Plants</div>
+                                        <div class="column-item__price">IDR 85.000</div>
+                                    </div>
+                                </div>
+                                <div class="items-row__column">
+                                    <div class="column-item">
+                                        <div class="column-item__img">
+                                            <img src="./img/plants/kecubung_3.png" alt="kaktus" srcset="">
+                                        </div>
+                                        <div class="column-item__subtitle">Kecubung Plants</div>
+                                        <div class="column-item__price">IDR 85.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
